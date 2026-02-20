@@ -1,0 +1,7 @@
+In the third homework, named semaphores were used in order to solve the unisex bathroom problem. They were used to be able to 
+execute the program on Mac, since unnamed semaphores were not supported. When solving the problem, four different semaphores were used. 
+One called "womenLock" and another "menLock" which helped separating the bathroom from being used by both women and men. When a women was
+in the bathroom, the semaphore was set to 0 which made it impossible for men to enter (and the same for the women when a man enterered the 
+bathroom). To make to queuing system fair, the semaphores were set so that the last women to enter the bathroom, unlocked the queue for 
+the men, so that they could enter, and vice versa. The two other semaphores were called "x" and "y" and were used to control the
+number of threads that could access the methods regarding the entering and queuing systems, so that race conditions would be avoided. 

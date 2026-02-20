@@ -1,0 +1,44 @@
+According to the results in the first table it is possible to see that the speedup stops increasing around 4 processors. When using one core compared to using 4 cores, a speedup of 2,34 was achieved but when using 5 cores, the speedup was around the same. 
+It did not increase more for more than 4 cores which could imply that the parallelizable part was quite small compared to the sequential part in the program. This is a result of the non-possible way to speed up a sequential part since it is not dependent on 
+the amount of cores since it is executed in serial. A way to achieve a greater speedup for a larger amount of cores would be by 
+re-writing the program so that the parallelizable part would be bigger. 
+
+
+   
+------------------ Benchmarks 8 queens different amount of threads ------------------ 
+
+Threads    | Runtime (ms) | Speedup        
+-----------------------          
+    1      |    506       |    1   
+-----------------------         
+    2      |    306       |    1,65     
+-----------------------         
+    3      |    249       |    2,03      
+-----------------------         
+    4      |    216       |    2,34    
+-----------------------           
+    5      |    220       |    2,30
+-----------------------
+    6      |    225       |    2,24
+-----------------------
+    7      |    230       |    2,20
+-----------------------
+    8      |    225       |    2,24
+-----------------------------------------------------------------------------------------------
+The average time of 100 executions
+
+------------------ Benchmarks N queens - bag of tasks ----------------------------------
+        Sequential            Parallelized N threads with OpenMP          
+
+Value of N | Runtime (ms)        Value of N | Runtime (ms)  |  Speedup      
+-----------------------       -----------------------------------------------             
+    8      |    505                  8      |     200       |   2,52
+-----------------------       -----------------------------------------------      
+    9      |    1800                 9      |     565       |   3,18
+-----------------------       -----------------------------------------------     
+   10      |    8700                10      |    1870       |   4,65
+-----------------------       -----------------------------------------------    
+   11      |   47000                11      |    9416       |   4,99
+-----------------------       -----------------------------------------------      
+   12      |  254000                12      |   51700       |   4,91
+------------------------------------------------------------------------------------------
